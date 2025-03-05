@@ -80,5 +80,4 @@ for tfile in transformed_files:
     df_append = df_append._append(df_temp, ignore_index=True)
 
 df_append = df_append[df_append.columns[[10,0,1,2,3,4,5,6,7,8, 9]]]
-#df_append[df_append["impound_num"].duplicated()]["impound_num"] = df_append[df_append["impound_num"].duplicated()]["impound_num"].apply(lambda x: f"{x}1")
 df_append.to_csv("Dallas_AS_2014-2024.csv", index=False)
